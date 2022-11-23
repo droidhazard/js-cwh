@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Player Controller</title>
+  <style>
+    body {
+      height: 100vh;
+    }
+    * {
+      /* border: 1px solid red; */
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .ground {
+      display: flex;
+      flex-direction: column;
+      transform: scale(1.2);
+      position: relative;
+      left: 50%;
+      top: 30%;
+    }
+    h3 {
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row1">
+      <button id="up">UP</button><br>
+    </div>
+    <div class="row2">
+      <button id="left">LEFT</button>
+      <button id="down">DOWN</button>
+      <button id="right">RIGHT</button>
+    </div>
+  </div>
+  <div class="ground">
+    <h3 id="gr1"></h3>
+    <h3 id="gr2"></h3>
+    <h3 id="gr3"></h3>
+    <h3 id="gr4"></h3>
+    <h3 id="gr5"></h3>
+  </div>
+
+  <script src="player-control.js"></script>
+</body>
+
+</html>
