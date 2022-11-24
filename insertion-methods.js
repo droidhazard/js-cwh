@@ -28,3 +28,12 @@ water.replaceWith(fire)
 //   let h6 = document.getElementsByTagName('h6')[i]
 //   h6.setAttribute('class', 'flex')
 // }
+
+let pop = document.getElementById('pop')
+let dynamicElement = document.createElement('h1')
+dynamicElement.innerText = `hello ${1+1}`
+pop.append(dynamicElement)
+dynamicElement = document.createElement('h1')
+dynamicElement.innerText = `hello ${1+1}`
+pop.append(dynamicElement)
+console.log('why')

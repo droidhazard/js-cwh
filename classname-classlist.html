@@ -5,9 +5,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>className and classList</title>
+  <style>
+    .yellow {
+      background-color: yellow;
+      color: white;
+    }
+    .red {
+      background-color: red;
+      color: white;
+    }
+    .text-dark {
+      color: black;
+    }
+    .gray {
+      background-color: gray;
+    }
+  </style>
 </head>
 <body>
-  
+  <div id="first" class="yellow text-dark">
+    <span>hey I am good</span>
+  </div>
+  <button id="tgl">Toggle Class</button>
 
   <script src="classname-classlist.js"></script>
 </body>
