@@ -6,11 +6,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chapter 8 Practice</title>
 </head>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  button {
+    border: none;
+    padding: 10px 15px;
+    font-weight: bold;
+  }
+  button:hover {
+    background-color: darkgray;
+  }
+  .bulb-container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .bulb-head {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #6868687b;
+  }
+  .bulb-lit {
+    background-color: #f3b720;
+    border: 2px solid black;
+  }
+  .bulb-bottom {
+    width: 80px;
+    height: 80px;
+    background-color: #1b1b1b;
+    border-radius: 20%;
+    z-index: -1;
+    position: relative;
+    top: -20px;
+  }
+</style>
 <body>
   <!-- Question 1 -->
   <button id="alert">Alert</button>
   <button id="prompt">Prompt</button>
   <button id="confirm">Confirm</button>
+
+  <br><br>
+
+  <!-- Question 2 -->
+  <button id="googleBtn">Google</button>
+  <button id="youtubeBtn">Youtube</button>
+  <button id="facebookBtn">Facebook</button>
+  <button id="gmailBtn">Gmail</button>
+  <button id="githubBtn">Github</button>
+
+  <!-- Question 4 -->
+  <div class="bulb-container">
+    <div class="bulb-head"></div>
+    <div class="bulb-bottom"></div>
+    <button id="bulbToggle" style="border: 2px solid black;">TOGGLE</button>
+  </div>
 
   <script src="ch8-ps.js"></script>
 </body>
