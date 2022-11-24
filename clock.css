@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
 * {
   /* border: 1px solid red; */
   margin: 0;
@@ -9,6 +11,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.digital-clock {
+  font-family: 'Righteous';
 }
 
 .dial {
