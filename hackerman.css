@@ -1,0 +1,41 @@
+/* Arabic font */
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;700;900&display=swap');
+/* Heading Glitch */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+/* Main Font */
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap');
+/* Secondary Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.random-text {
+  color: #03e44a;
+  position: absolute;
+  opacity: 0.5;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none;
+}
+body {
+  background-image: url('hackerman-bg.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #000000cf;
+  height: 90vh;
+  width: 90vw;
+}
+
+.top-bar h2 {
+  color: aquamarine;
+}
