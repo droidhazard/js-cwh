@@ -14,13 +14,23 @@
 }
 
 .random-text {
-  color: #03e44a;
+  /* color: #03e44a; */
   position: absolute;
   opacity: 0.5;
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
+  -webkit-user-select: none;
+  /* Safari */
+  -ms-user-select: none;
+  /* IE 10 and IE 11 */
   user-select: none;
+  color: transparent;
+  text-shadow: 1px 1px 1px #03e44a9b;
+  overflow: hidden;
+  text-overflow: clip;
+  word-wrap: normal;
 }
+
+/* Layout elements */
+
 body {
   background-image: url('hackerman-bg.jpg');
   background-size: cover;
@@ -28,14 +38,107 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  flex-wrap: nowrap;
 }
 
 .container {
   background-color: #000000cf;
   height: 90vh;
   width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  width: 100%;
 }
 
 .top-bar h2 {
-  color: aquamarine;
+  color: #03e44a9b;
+  font-family: 'Titillium Web';
+}
+
+.paned-layout {
+  border: 1px solid red;
+  height: 85%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.pane {
+  border: 1px solid red;
+  height: 99%;
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  padding: 5px;
+  color: #00ff4c;
+}
+
+.output-pane {
+  overflow-y: scroll;
+}
+
+/* Input components */
+label {
+  color: #42e034;
+  font-size: 15px;
+  margin: 2px;
+}
+input[type='text'] {
+  border: 2px solid rgb(165, 5, 5);
+  outline: none;
+  background-color: transparent;
+  margin: 2px;
+  font-size: 15px;
+  color: #42e034;
+  padding: 5px;
+}
+select {
+  border: 2px solid rgb(165, 5, 5);
+  outline: none;
+  background-color: transparent;
+  margin: 2px;
+  font-size: 15px;
+  color: #42e034;
+  padding: 5px;
+}
+option {
+  background-color: transparent;
+}
+button {
+  padding: 10px 10px;
+  margin: 50px 10px;
+  background-color: transparent;
+  outline: none;
+  border: 2px solid #42e034;
+  font-size: 18px;
+  color: #42e034;
+  font-family: 'Orbitron';
+  letter-spacing: 5px;
+  transition: all 0.3s ease-out;
+}
+button:hover {
+  border-left: 10px solid #00ff4c;
+  border-right: 10px solid #00ff4c;
+  border-top: 2px solid red;
+  border-bottom: 2px solid cyan;
+  color: cyan;
+  letter-spacing: 20px;
+}
+button:active {
+  background-color: #00ff4c;
+  color: #000;
+  border: 2px solid #000;
 }

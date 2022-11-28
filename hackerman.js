@@ -1,4 +1,10 @@
-// // Variable & Definitions
+// // HTML Elements
+const arabicTextElement = document.getElementById('random-text')
+const crackBtn = document.getElementById('crack')
+const vpnSelect = document.getElementById('vpn')
+const vpnValue = vpnSelect.options[vpnSelect.selectedIndex].text
+const outputPane = document.querySelector('.output-pane')
+// // Variables & Definitions
 const arabicContent = [`تحذير (يحتوي x على عناصر NA)
 يعني (س)
 }
@@ -42,11 +48,32 @@ safe_mean (c (1، NA))
 
 في الختام ، إذا كنت مهتمًا بقراءة المقالات التي يشكو فيها الأشخاص من PHP ، فإليك قائمة مختصرة:`]
 const fontsAvailable = ['Alexandria', 'Rubik Glitch', 'Titillium Web', 'Orbitron']
-const arabicTextElement = document.getElementById('random-text')
 arabicTextElement.innerText = arabicContent[0]
-arabicTextElement.style.fontFamily = 'Orbitron'
+arabicTextElement.style.fontFamily = 'Alexandria'
+const fontWeights = [300, 400, 500, 600, 700]
 
 // // Function Definitions
 const backgroundAnimation = async () => {
-  
+  setInterval(() => {
+    const randomFontIndex = fontsAvailable[(Math.floor(Math.random() * fontsAvailable.length))]
+    const randomTextIndex = Math.floor(Math.random() * (arabicContent.length))
+    const randomWeightIndex = fontWeights[(Math.floor(Math.random() * fontWeights.length))]
+    arabicTextElement.style.fontWeight = randomWeightIndex
+    arabicTextElement.innerText = arabicContent[randomTextIndex]
+    arabicTextElement.style.fontFamily = randomFontIndex
+    // console.log(randomWeightIndex)
+
+  }, 1000)
 }
+backgroundAnimation()
+crackBtn.addEventListener('click', () => {
+  const username = document.getElementById('username').value
+  const vpnSelect = document.getElementById('vpn')
+  const vpnValue = vpnSelect.options[vpnSelect.selectedIndex].value
+  console.log(vpnValue)
+  console.log(username)
+  let p = document.createElement('p')
+  p.innerText = vpnValue + username
+  outputPane.appendChild(p)
+
+})

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +8,39 @@
   <title>Hack Someone's account online</title>
   <link rel="stylesheet" href="hackerman.css">
 </head>
+
 <body>
-  <p id="random-text" class="random-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, rem praesentium ab minima quidem blanditiis, animi cumque tempore illo mollitia quibusdam cupiditate. Mollitia, quae nostrum. Numquam delectus consequatur repellendus excepturi.</p>
+  <p id="random-text" class="random-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, rem
+    praesentium ab minima quidem blanditiis, animi cumque tempore illo mollitia quibusdam cupiditate. Mollitia, quae
+    nostrum. Numquam delectus consequatur repellendus excepturi.</p>
   <div class="container">
     <div class="top-bar">
       <h2>HACK ANYONE'S ACCOUNT</h2>
+    </div>
+    <div class="paned-layout">
+      <div class="pane">
+        <label for="username">Enter username or profile link/输入用户名或个人资料链接：</label>
+        <input type="text" name="" id="username" placeholder="用户名">
+        <label for="vpn">Use free VPN encryption provided by/使用由提供的 VPN 加密:</label>
+        <select name="vpn" id="vpn">
+          <option value="none">none</option>
+          <option value="PrivadoVPN">PrivadoVPN</option>
+          <option value="ProtonVPN">ProtonVPN</option>
+          <option selected="selected" value="Hide.me">Hide.me</option>
+          <option value="TunnelBear">TunnelBear</option>
+          <option value="Atlas VPN">Atlas VPN</option>
+          <option value="Windscribe">Windscribe</option>
+          <option value="ZoogVPN">ZoogVPN</option>
+        </select>
+        <label for="vm"><input type="checkbox" name="vm" id="vm">Use Virtual Machine if possible/尽可能使用虚拟机</label>
+        <label for="newalgo"><input type="checkbox" name="newalgo" id="newalgo">Use experimental cracking algorithm (increased performance)/使用实验破解算法（提高性能)</label>
+        <button id="crack">CRACK</button>
+      </div>
+      <div class="pane output-pane"></div>
     </div>
   </div>
 
   <script src="hackerman.js"></script>
 </body>
+
 </html>
