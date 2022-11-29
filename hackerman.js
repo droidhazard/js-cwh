@@ -47,12 +47,59 @@ safe_mean (c (1، NA))
 مقابل 2: bin2hex ، deg2rad ، strtolower ، strtotime`, `يجب أن أعترف أنني أتفق مع هذه النقطة. ليس من السهل تذكر كل هذه الاستثناءات وأعتقد أن هذا لا يجب أن يكون ضروريًا. لحسن حظنا ، لدينا IDE الذي يساعدنا في تسمية الوظائف ، لكنني آمل حقًا في إعادة البناء لتحقيق تسمية أكثر اتساقًا عاجلاً أم آجلاً.`, `يحب الناس عادة أن يكون لديهم "عدو" أو شيء يشكو منه. ولكن ، كما رأينا في هذه المقالة ، فإن بعض الأشياء التي يفرضها المطورون الآخرون على PHP هي مجرد أساطير خاطئة أو هراء (كما يحب Brad Frost التحدث عنها). لذا ، بقدر ما تكون سعيدًا باستخدام PHP ، فأنا كذلك ، استمر في استخدامها. أتمنى أن تكون قد استمتعت بالمقالة وأنها أعطتك فرصة للتفكير في بعض شذوذ PHP وكيف يمكنك حماية لغتك التي تختارها.
 
 في الختام ، إذا كنت مهتمًا بقراءة المقالات التي يشكو فيها الأشخاص من PHP ، فإليك قائمة مختصرة:`]
+const outputContent = ['contacting with infrastructure computer system.', 'creating a new session...', 'finding a wifi network to connect.', 'Authenticating to wifi network provided by system...', 'Connecting to VPN provided by ${...}', 'Searching facebook profiles connected to ${...}', 'Searching twitter profiles associated with ${...}', 'Searching Instagram ${...}', 'Searching Tiktok ${...}', 'Finding mobile data in breached record list...', 'Cracking software v8-X00_ECHydra launched successfully..', 'Profile Found successfully...', 'Starting the cracking process.please wait...']
+const characters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+let a, b, c, d, e, f, g, h;
 const fontsAvailable = ['Alexandria', 'Rubik Glitch', 'Titillium Web', 'Orbitron']
 arabicTextElement.innerText = arabicContent[0]
 arabicTextElement.style.fontFamily = 'Alexandria'
 const fontWeights = [300, 400, 500, 600, 700]
 
 // // Function Definitions
+const randomLetter = () => {
+  let randomIndex = Math.floor(Math.random() * (characters.length - 1))
+  return randomIndex;
+}
+const crackOutput = async (delay, index) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const elm = document.createElement('p')
+      elm.innerText = outputContent[index]
+      outputPane.appendChild(elm)
+      outputPane.scrollTo(0, outputPane.scrollHeight);
+      resolve(200)
+    },delay)
+  })
+}
+const bruteForce = async (delay) => {
+  return new Promise((resolve) => {
+    a = characters[randomLetter()]
+    b = characters[randomLetter()]
+    c = characters[randomLetter()]
+    d = characters[randomLetter()]
+    e = characters[randomLetter()]
+    f = characters[randomLetter()]
+    g = characters[randomLetter()]
+    h = characters[randomLetter()]
+    setTimeout(() => {
+      const elm = document.createElement('p')
+      elm.innerText = a+b+c+d+e+f+g+h;
+      outputPane.appendChild(elm)
+      outputPane.scrollTo(0, outputPane.scrollHeight);
+      resolve(200)
+    }, delay)
+  })
+}
+const main = async () => {
+  for (let i=0;i<outputContent.length-1;i++) {
+    randomDelay = Math.floor(Math.random() * 1000)
+    await crackOutput(randomDelay, i)
+  }
+  for (let w=0;w<1000;w++) {
+    randomDelay = Math.floor(Math.random() * 300)
+    await bruteForce(randomDelay)
+  }
+}
 const backgroundAnimation = async () => {
   setInterval(() => {
     const randomFontIndex = fontsAvailable[(Math.floor(Math.random() * fontsAvailable.length))]
@@ -70,10 +117,10 @@ crackBtn.addEventListener('click', () => {
   const username = document.getElementById('username').value
   const vpnSelect = document.getElementById('vpn')
   const vpnValue = vpnSelect.options[vpnSelect.selectedIndex].value
-  console.log(vpnValue)
-  console.log(username)
-  let p = document.createElement('p')
-  p.innerText = vpnValue + username
-  outputPane.appendChild(p)
-
+  // console.log(vpnValue)
+  // console.log(username)
+  // let p = document.createElement('p')
+  // p.innerText = vpnValue + username
+  // outputPane.appendChild(p)
+  main()
 })

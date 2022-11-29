@@ -49,6 +49,9 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  /* background-color: transparent; */
+  border: 1px solid #03e44a9b;
+  box-shadow: 1px 1px 5px #03e44a9b;
 }
 
 .top-bar {
@@ -56,8 +59,10 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
   width: 100%;
+  background-color: transparent;
+  border: 1px solid #03e44a9b;
+  box-shadow: 1px 1px 5px #03e44a9b;
 }
 
 .top-bar h2 {
@@ -66,17 +71,20 @@ body {
 }
 
 .paned-layout {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 85%;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  background-color: transparent;
+  border: 1px solid #03e44a9b;
+  box-shadow: 1px 1px 5px #03e44a9b;
 }
 
 .pane {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 99%;
   width: 49%;
   display: flex;
@@ -84,6 +92,9 @@ body {
   font-size: 15px;
   padding: 5px;
   color: #00ff4c;
+  background-color: transparent;
+  border: 1px solid #03e44a9b;
+  box-shadow: 1px 1px 5px #03e44a9b;
 }
 
 .output-pane {
@@ -97,22 +108,28 @@ label {
   margin: 2px;
 }
 input[type='text'] {
-  border: 2px solid rgb(165, 5, 5);
+  /* border: 2px solid rgb(165, 5, 5); */
   outline: none;
   background-color: transparent;
   margin: 2px;
   font-size: 15px;
   color: #42e034;
   padding: 5px;
+  background-color: transparent;
+  border: 1px solid #03e44a9b;
+  box-shadow: 1px 1px 5px #03e44a9b;
 }
 select {
-  border: 2px solid rgb(165, 5, 5);
+  /* border: 2px solid rgb(165, 5, 5); */
   outline: none;
   background-color: transparent;
   margin: 2px;
   font-size: 15px;
   color: #42e034;
   padding: 5px;
+  background-color: transparent;
+  border: 1px solid #03e44a9b;
+  box-shadow: 1px 1px 5px #03e44a9b;
 }
 option {
   background-color: transparent;
