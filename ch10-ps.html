@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://bootswatch.com/5/cyborg/bootstrap.css">
+  <title>Chapter 10 Practice</title>
+</head>
+
+<body>
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Chapter 10 Practice</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+        aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+              aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!-- MAIN CONTAINER -->
+  <div class="container mt-3">
+    <h1 class=" text-success text-center">fetch & localStorage</h1>
+    <div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
+      <div class="card-header">Get a Random Idea</div>
+      <div class="card-body">
+        <h4 id="activity-title" class="card-title">Activity title</h4>
+        <p id="activity-body" class="card-text">Activity body</p>
+        <div class="d-grid gap-2">
+          <div id="pbar" class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar"
+              aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+          </div>
+          <button id="generate-idea" type="button" class="btn btn-primary">Generate Idea</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADD / REMOVE NOTES -->
+    <div class="container m-5 d-inline" style="max-width: 20rem;">
+      <h5>Add a note:</h5>
+      <input type="text" name="" class="form-control" id="add-note-title" placeholder="Note title..."
+        style="max-width: 20rem;">
+      <textarea class="form-control mt-2" id="add-note-body" rows="3" placeholder="What exactly it is..."
+        style="max-width: 20rem;"></textarea>
+      <div class="d-grid gap-2">
+        <button id="add-note-btn" class="btn btn-primary mt-2" type="button" style="max-width: 20rem;">Create</button>
+        <input type="text" name="" class="form-control card border-danger text-dark" id="remove-note-id"
+          placeholder="Enter note id..." style="max-width: 20rem;">
+        <button id="remove-note-btn" class="btn btn-danger mt-2 delete" type="button"
+          style="max-width: 20rem;">Remove</button>
+      </div>
+    </div>
+
+    <!-- ALL NOTES -->
+    <h3 class=" text-warning text-center">Your all notes</h3>
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+            aria-expanded="true" aria-controls="collapseOne"><span class="badge bg-secondary rounded-pill">1 </span>
+            Note Title
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Note Body
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- ./container -->
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+  <script src="ch10-ps.js"></script>
+</body>
+
+</html>
