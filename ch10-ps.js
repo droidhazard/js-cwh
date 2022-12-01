@@ -8,20 +8,20 @@ let genBtn = document.getElementById('generate-idea')
 let progressBar = document.getElementById('pbar')
 
 // Fetch data from boredapi
-const getActivity =  () => {
+const getActivity = () => {
   genBtn.setAttribute('disabled', true)
   progressBar.style.display = 'flex'
-  let activity =  fetch('https://www.boredapi.com/api/activity')
-  .then((response) => {
-    return response.json()
-  }).then((activity) => {
-    cardTitle.innerText = activity.type
-    cardBody.innerText = activity.activity
-    console.log(`Activity Type: ${activity.type}`)
-    console.log(`Activity: ${activity.activity}`)
-    genBtn.removeAttribute('disabled')
-    progressBar.style.display = 'none'
-  })
+  let activity = fetch('https://www.boredapi.com/api/activity')
+    .then((response) => {
+      return response.json()
+    }).then((activity) => {
+      cardTitle.innerText = activity.type
+      cardBody.innerText = activity.activity
+      console.log(`Activity Type: ${activity.type}`)
+      console.log(`Activity: ${activity.activity}`)
+      genBtn.removeAttribute('disabled')
+      progressBar.style.display = 'none'
+    })
   console.log('hello')
 }
 getActivity()
@@ -35,27 +35,44 @@ removeNoteId = document.getElementById('remove-note-btn')
 removeNoteBtn = document.getElementById('remove-note-btn')
 
 // Note object
-let notes2d = []
-class Note  {
+class Note {
   constructor(title, body) {
     this.title = title
     this.body = body
-    this.id = localStorage.length
+    this.id = getID()
   }
 }
 
 // Add a note to localStorage
-const printNote = () => {
-  noteTitle = addNoteTitle.value
-  noteBody = addNoteBody.value
-  const note = new Note(noteTitle, noteBody)
-  // console.log(note.title, note.body, note.id)
-  let note1d = [note.title, note.body, note.id]
-  notes2d.push(note1d)
-  console.log(notes2d)
-  notes2d.forEach((note, index) => {
-    
-  })
-  localStorage.setItem()
+
+const addNote = (note) => {
+  let notes = getNotes()
+  notes.push(note)
+  localStorage.setItem('notes', JSON.stringify(notes))
 }
-addNoteBtn.addEventListener('click', printNote)
+const getID = () => {
+  let id
+  if (localStorage.getItem('notes') === null) {
+    id = 0
+  } else {
+    id = localStorage.getItem('notes').length
+  }
+  return id;
+}
+// Get notes from localstorage
+const getNotes = () => {
+  let notes;
+  if (localStorage.getItem('notes') === null) {
+    notes = []
+  } else {
+    notes = JSON.parse(localStorage.getItem('notes'))
+  }
+  return notes;
+}
+addNoteBtn.addEventListener('click', () => {
+  const title = addNoteTitle.value
+  const body = addNoteBody.value
+  const id = localStorage.length
+  const note = new Note(title, body, id)
+  addNote(note)
+})
