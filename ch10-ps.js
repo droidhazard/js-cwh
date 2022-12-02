@@ -28,11 +28,11 @@ getActivity()
 genBtn.addEventListener('click', getActivity)
 
 // HTML Elements for note App
-addNoteTitle = document.getElementById('add-note-title')
-addNoteBody = document.getElementById('add-note-body')
-addNoteBtn = document.getElementById('add-note-btn')
-removeNoteId = document.getElementById('remove-note-btn')
-removeNoteBtn = document.getElementById('remove-note-btn')
+const addNoteTitle = document.getElementById('add-note-title')
+const addNoteBody = document.getElementById('add-note-body')
+const addNoteBtn = document.getElementById('add-note-btn')
+const removeNoteId = document.getElementById('remove-note-btn')
+const removeNoteBtn = document.getElementById('remove-note-btn')
 
 // Note object
 class Note {
