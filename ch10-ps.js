@@ -69,6 +69,7 @@ const getNotes = () => {
   }
   return notes;
 }
+
 addNoteBtn.addEventListener('click', () => {
   const title = addNoteTitle.value
   const body = addNoteBody.value
