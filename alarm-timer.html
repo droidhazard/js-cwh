@@ -6,9 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Set a Timer</title>
   <link rel="stylesheet" href="alarm-timer.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 </head>
 <body>
-  <div class="block"></div>
+  <div class="block">
+    <div class="top-circle"><i class="bi bi-alarm"></i></div>
+    <input type="number" id="timerMinutes" placeholder="Minutes">
+    <button id="setTimer">Set Timer <i class="bi bi-plus-circle"></i></button>
+    <h3 id="timerOutput">00:00</h3>
+  </div>
   
 
   <script src="alarm-timer.js"></script>

@@ -12,9 +12,63 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: sans-serif;
 }
 .block {
-  height: 500px;
-  width: 500px;
+  height: 400px;
+  width: 400px;
   background: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.block .top-circle {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #e4345a;
+  position: absolute;
+  top: -5%;
+  left: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.block .top-circle i {
+  color: #fff;
+  font-size: 25px;
+}
+
+input[type='number'] {
+  outline: none;
+  border: 2px solid #ccc;
+  padding: 10px 10px;
+  width: 80%;
+  margin: 5px;
+}
+button#setTimer {
+  background-color: #e4345a;
+  border: none;
+  outline: none;
+  padding: 10px;
+  width: 80%;
+  margin: 5px;
+  color: #fff;
+  font-size: 15px;
+  transition: all 0.2s ease-out;
+}
+button#setTimer:hover {
+  background-color: #f04e74;
+}
+button i {
+  font-size: 20px;
+  float: right;
+}
+h3 {
+  color: #ccc;
+  letter-spacing: .15em;
+  text-shadow: 1px 1px 2px #474747;
 }
