@@ -4,7 +4,7 @@ const main = () => {
   setInterval(()=> {
     let randIndex = Math.floor(Math.random() * notes.length)
     console.log(notes[randIndex])
-  }, 5000)
+  }, 3000)
 }
 
 main()
