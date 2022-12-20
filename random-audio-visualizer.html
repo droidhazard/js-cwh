@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Random Audio Visualizer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="./random-audio-visualizer.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
+
 <body>
-  
+  <nav>
+    <div class="nav-wrapper deep-purple accent-4">
+      <a href="#" class="brand-logo">Random Visualizer</a>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="mycontainer">
+      <div id="bar-1" class="bar"></div>
+    </div>
+
+    <div class="row">
+      <div class="col s4 offset-s3">
+        <h4 id="bars-amount" class="center-align">1</h4>
+      </div>
+      <div class="col s12">
+        <button id="add-btn" class="btn-floating waves-effect waves-light indigo darken-4"><i class="material-icons">add</i></button>
+        <button id="pause-btn" class="btn-floating waves-effect waves-light cyan darken-1"><i class="material-icons">play_arrow</i></button>
+        <button id="remove-btn" class="btn-floating waves-effect waves-light indigo darken-4"><i class="material-icons">remove</i></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="./random-audio-visualizer.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  height: 100vh;
+  width: 100vw;
+}
+
+.mycontainer {
+  margin-top: 10vh;
+  background-color: antiquewhite;
+  width: 60vw;
+  height: 50vh;
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+  padding: 30px;
+}
+
+.bar {
+  margin-right: 5px;
+  height: 100%;
+  width: 10px;
+  background: linear-gradient(to top, #7743db, #5245d5, #7743db);
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
